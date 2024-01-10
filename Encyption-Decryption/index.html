@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Cipher Tool</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+</head>
+<!--Body-->
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img class="logo-img" src="cp2.png" alt="" width="110" height="60">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#feedback">User Feedback</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="background-color: #1e3244;">
+        <div class="row">
+            <div class="col-6 p-5">
+                <h1 class="btn1" style="font-weight: bold;">We Are Ready <br>To Protect Your Data</h1>
+                <div class="btn">
+                    <button type="button" class="btn btn-danger btn-lg-center" style="margin-left:220px;">GET
+                        START</button>
+                </div>
+            </div>
+            <div class="col-6 img-fluid p-5">
+                <img src="bg-pic.jpg" class="d-block img-fluid rounded float-end" alt="...">
+            </div>
+            <!--About-->
+            <section id="about" style="background-color: #a4becf;">
+                <h2 style="text-align: center; font-weight: bold;color: #0c0c0c;">About</h2>
+                <p style="text-align: center;color: #000000;">This website provides a tool for encrypting and decrypting
+                    messages using various ciphers. It currently
+                    supports the Playfair and Vigenere ciphers.</p>
+            </section>
+            <!--Mission-->
+            <section id="mission" style="background-color: #35606d;">
+                <h2 style="text-align: center; font-weight: bold;color: #000000;">Our Mission</h2>
+                <p style="text-align: center;color: #080808;">Our mission is to make cryptography accessible and easy to
+                    use for everyone. We believe that secure
+                    communication is essential in today's digital world.</p>
+            </section>
+
+            <!--Main-->
+            <section id="home" style="background-color: #a4becf;">
+                <div class="cipher-container">
+                    <div class="cipher-control">
+                        <label for="cipher-select">Select Cipher:</label>
+                        <select id="cipher-select">
+                            <option value="playfair">Playfair Cipher</option>
+                            <option value="vigenere">Vigenere Cipher</option>
+                        </select>
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="cipher-key">Cipher Key:</label>
+                        <input type="text" id="cipher-key" placeholder="Enter Playfair Cipher Key">
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="plain">Plain Text:</label>
+                        <textarea id="plain" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="encrypted">Encrypted Text:</label>
+                        <textarea id="encrypted" rows="4" cols="50" readonly></textarea>
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="decrypted">Decrypted Text:</label>
+                        <textarea id="decrypted" rows="4" cols="50" readonly></textarea>
+                    </div>
+
+                    <div class="cipher-control">
+                        <button id="encrypt">Encrypt</button>
+                        <button id="decrypt">Decrypt</button>
+                        <button id="reset" style="background-color: rgb(69, 76, 175);">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="feedback" style="background-color: #35606d;">
+                <h2 style="text-align: center; font-weight: bold;color: #000000;">User Feedback</h2>
+                <div class="cipher-container">
+
+                    <div class="cipher-control">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="cipher-control">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="cipher-control">
+                        <button id="submit">Submit</button>
+                        <button id="reset-feedback" style="background-color: rgb(8, 90, 197);">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <!--contact-->
+            <section id="contact" style="background-color: #a4becf;">
+                <h2 style="text-align: center; font-weight: bold;color: #0c0c0c;">Contact Us</h2>
+                <p style="text-align: center; font-weight: bold;color: #0c0c0c;">For any inquiries or support, please
+                    feel free to contact us using the form below:</p>
+
+                <div class="cipher-container">
+                    <div class="cipher-control">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="cipher-control">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="cipher-control">
+                        <button id="contact-submit">Submit</button>
+                        <button id="contact-reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="bg-body-tertiary text-center">
+                <div class="container p-4">
+
+                    <!-- Section: Social media -->
+
+                    <section class="mb-4">
+
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button">
+                            <i class="fab fa-facebook-f"></i></a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-google"></i></a>
+
+
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                    </section>
+                    <!-- Section: Social media -->
+
+                    <!-- Section: Form -->
+                    <section class="">
+                        <form action="">
+
+                            <div class="row d-flex justify-content-center">
+
+                                <div class="col-auto">
+                                    <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                                        Sign Up
+                                    </button>
+                                </div>
+
+                                <div class="col-md-5 col-12">
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" class="form-control" />
+                                        <label class="form-label" for="form5Example24">Email address</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-auto">
+
+                                    <button data-mdb-ripple-init type="submit" class="btn btn-danger mb-4">
+                                        Subscribe
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </section>
+                </div>
+
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                    © 2023 Copyright:
+                    <a class="text-reset fw-bold" href="#">CyberScoop.com</a>
+                </div>
+
+            </footer>
+            <script src="script.js"></script>
+</body>
+
+</html>
